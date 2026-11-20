@@ -1,4 +1,4 @@
-import { ButtonProps } from '../../interfaces';
+import { ButtonProps } from '@/interfaces';
 
 const Button = ({ label, onClick, className = '' }: ButtonProps) => {
   return (

@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { CardProps } from '../../interfaces';
+import { CardProps } from '@/interfaces';
 import Button from './Button';
 
 const Card = ({ title, description, image, onAction, buttonText }: CardProps) => {
@@ -9,7 +9,7 @@ const Card = ({ title, description, image, onAction, buttonText }: CardProps) =>
       <div className="p-4">
         <h3 className="text-lg font-semibold mb-2">{title}</h3>
         <p className="text-gray-600 mb-4">{description}</p>
-        {onAction && <Button label={buttonText} onClick={onAction} />}
+        {onAction && buttonText && <Button label={buttonText} onClick={onAction} />}
       </div>
     </div>
   );

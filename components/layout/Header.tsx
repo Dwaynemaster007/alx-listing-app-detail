@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const accommodationTypes = [
@@ -11,26 +12,26 @@ const accommodationTypes = [
 
 export const Header: React.FC = () => {
   return (
-    <header className="bg-white shadow-md p-4 flex flex-col md:flex-row items-center justify-between">
+    <header className="bg-white shadow-md p-4 flex flex-col md:flex-row items-center justify-between gap-4">
       {/* Logo */}
-      <div className="text-2xl font-bold text-blue-600 cursor-pointer">
+      <Link href="/" className="text-2xl font-bold text-blue-600">
         ALX Listing
-      </div>
+      </Link>
 
       {/* Search Bar */}
-      <div className="flex flex-1 max-w-lg mx-4">
+      <div className="flex w-full flex-1 max-w-lg md:mx-4">
         <input
           type="search"
           placeholder="Search properties..."
           className="flex-grow border border-gray-300 rounded-l-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
-        <button className="bg-blue-600 text-white px-4 rounded-r-md hover:bg-blue-700 transition">
+        <button type="button" className="bg-blue-600 text-white px-4 rounded-r-md hover:bg-blue-700 transition">
           Search
         </button>
       </div>
 
       {/* Accommodation Types */}
-      <nav className="hidden md:flex space-x-4 mr-6">
+      <nav className="hidden xl:flex space-x-4 mr-6">
         {accommodationTypes.map((type) => (
           <button
             key={type}
